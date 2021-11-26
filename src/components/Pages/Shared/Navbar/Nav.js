@@ -54,11 +54,14 @@ const Nav = () => {
                             </li>
                         </ul>
                     </div>
+
                     <div className='inline cursor-pointer'>
                         <i class="fas pl-1 fa-clipboard-list text-2xl hover:text-yellow-500 text-red-400 mr-2 ml-2 border-l-2 border-gray-600"></i>
                         <span className='hidden md:inline text-gray-600 hover:text-yellow-500 font-medium text-base'>bookings</span>
                     </div>
                 </h5>
+
+                
             </div>
         </div>
     );

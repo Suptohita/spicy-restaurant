@@ -1,6 +1,6 @@
 import React from 'react';
 import Footer from '../../Shared/Footer/Footer';
-import Navbar from '../../Shared/Navbar/Navbar';
+import Nav from '../../Shared/Navbar/Nav';
 import Chef from '../Chef';
 import FeatureDishes from '../FeatureDishes';
 import Gallery from '../Gallery';
@@ -13,7 +13,7 @@ import Services from '../Services';
 const Home = () => {
     return (
         <div>
-            <Navbar></Navbar>
+            <Nav></Nav>
             <Header></Header>
             <OurStory></OurStory>
             <Services></Services>

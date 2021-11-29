@@ -9,12 +9,15 @@ import Menu from '../Menu';
 import OpeningHour from '../OpeningHour';
 import OurStory from '../OurStory';
 import Services from '../Services';
+import TodaysFeature from '../TodaysFeature';
+
 
 const Home = () => {
     return (
         <div>
             <Nav></Nav>
             <Header></Header>
+            <TodaysFeature></TodaysFeature>
             <OurStory></OurStory>
             <Services></Services>
             <FeatureDishes></FeatureDishes>

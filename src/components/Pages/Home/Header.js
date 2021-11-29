@@ -3,7 +3,7 @@ import dish from './Images/dish.png'
 
 const Header = () => {
     return (
-        <div className='flex lg:flex-row flex-col-reverse justify-center lg:text-left text-center items-center md:mt-28 md:mb-20 mt-12 mb-12'>
+        <div className='flex lg:flex-row flex-col-reverse justify-center lg:text-left text-center items-center md:mt-28 md:mb-20 mt-12 mb-20'>
             <div>
                 <h5 className='text-xl text-yellow-500 font-bold mt-2'>Food Service</h5>
                 <h1 className='md:text-6xl text-4xl font-bold mt-1'>Welcome to our <br /> restautant</h1>

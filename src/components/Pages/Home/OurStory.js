@@ -3,8 +3,8 @@ import React from 'react';
 const OurStory = () => {
     return (
         <div className='text-center'>
-            <h6 className='text-yellow-500 font-bold text-base'>OUR STORY</h6>
-            <h2 className='text-4xl font-bold mt-2 mb-1'>About our restaurant</h2>
+            <h6 className='text-yellow-500 font-bold text-sm'>OUR STORY</h6>
+            <h2 className='text-3xl font-bold mt-2 mb-1'>About our restaurant</h2>
 
             <p className='hidden md:block text-lg font-base text-gray-500 mt-2'>Every day, more than 1 million guests visit our restaurants around the world. <br />And they do so because our restaurants are known for serving high-quality, <br /> great-tasting, and affordable food.The original Home of the Whopper, our<br />commitment premium ingredients,recipes, and family-friendly dining.</p>
 

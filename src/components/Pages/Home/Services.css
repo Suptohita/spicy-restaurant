@@ -1,0 +1,5 @@
+.service:hover{
+    border-top: rgb(248, 181, 66) 4px solid;
+    background-color: white;
+    transition: ease-in-out 0.2s;
+}

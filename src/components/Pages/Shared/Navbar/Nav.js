@@ -3,10 +3,6 @@ import logo from './image/logo.svg'
 import './Nav.css'
 
 
-
-
-
-
 const Nav = () => {
     return (
         <div>

@@ -2,9 +2,8 @@ import React from 'react';
 
 const OpeningHour = () => {
     return (
-        <div>
             <div className='bg-gray-100 pt-10 pb-10 text-center lg:flex justify-between md:mx-28 lg:mx-80 items-center rounded-lg'>
-                <div className='ml-20'>
+                <div className=''>
                     <h5 className='text-yellow-500  font-bold text-sm'>AVAILABILITY</h5>
                     <h1 className='text-3xl font-bold mt-1'>Opening hour</h1>
                 </div>
@@ -24,7 +23,6 @@ const OpeningHour = () => {
                     </div>
                 </div>
             </div>
-        </div>
     );
 };
 

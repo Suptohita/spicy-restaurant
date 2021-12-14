@@ -3,7 +3,7 @@ import plate from './Images/plate.png'
 
 const TodaysFeature = () => {
     return (
-        <div className='flex lg:flex-row flex-col justify-center lg:text-left text-center items-center md:mt-28 md:mb-20 mt-12 mb-12 bg-gray-50'>
+        <div className='flex lg:flex-row flex-col justify-center lg:text-left text-center items-center md:mt-28 md:mb-20 mt-12 mb-12 bg-gray-50 pb-7'>
             <div>
                 <img className='lg:max-w-xl' src={plate} alt="" />
             </div>

@@ -18,7 +18,7 @@ const Gallery = () => {
             <div className='flex flex-wrap justify-center mt-6'>
             {
                 foodImage.map(images =>
-                    <img className='m-1 gallery-img cursor-pointer' style={{height:'225px', width:'300px', objectFit:'cover'}} src={images.image} alt="" />
+                    <img key={images._id} className='m-1 gallery-img cursor-pointer' style={{height:'225px', width:'300px', objectFit:'cover'}} src={images.image} alt="" />
                 )
             }
             </div>

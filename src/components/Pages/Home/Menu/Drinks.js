@@ -1,12 +1,11 @@
 import React from 'react';
-import './Chef.css'
 
-const Chef = () => {
+const Drinks = () => {
     return (
         <div>
-            chef
+            drinks
         </div>
     );
 };
 
-export default Chef;
+export default Drinks;

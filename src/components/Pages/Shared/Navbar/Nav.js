@@ -28,10 +28,10 @@ const Nav = () => {
             </div>
 
             <div className='flex bg-gray-50 p-3 lg:mx-72 justify-center items-center'>
+                <h1 className='inline md:mx-5 mx-1 text-lg font-medium hover:text-yellow-500 cursor-pointer '>Home</h1>
                 <h1 className='inline md:mx-5 mx-1 text-lg font-medium hover:text-yellow-500 cursor-pointer '>Menu</h1>
                 <h1 className='inline md:mx-5 mx-1 text-lg font-medium hover:text-yellow-500 cursor-pointer '>About</h1>
                 <h1 className='inline md:mx-5 mx-1 text-lg font-medium hover:text-yellow-500 cursor-pointer '>Contact</h1>
-                <h1 className='inline md:mx-5 mx-1 text-lg font-medium hover:text-yellow-500 cursor-pointer '>Pages</h1>
 
                 <h5 className='text-lg font-medium md:ml-32 lg:ml-72 border-l-2 border-gray-600'>
                     <div className="dropdown inline-block ml-2 text-white text-sm bg-gray-700 hover:bg-yellow-500 mr-2 rounded-full border-t-8 pl-2 pt-1 pb-1">
@@ -57,7 +57,7 @@ const Nav = () => {
                     </div>
                 </h5>
 
-                
+
             </div>
         </div>
     );

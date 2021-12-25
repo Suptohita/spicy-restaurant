@@ -2,7 +2,7 @@ import React from 'react';
 
 const OpeningHour = () => {
     return (
-            <div className='bg-gray-100 pt-10 pb-10 text-center lg:flex justify-between md:mx-28 lg:mx-80 items-center rounded-lg'>
+            <div className='bg-gray-100 pt-10 pb-10 text-center mt-16 lg:flex justify-between md:mx-28 lg:mx-80 items-center rounded-lg'>
                 <div className='lg:ml-20'>
                     <h5 className='text-yellow-500  font-bold text-sm'>AVAILABILITY</h5>
                     <h1 className='text-3xl font-bold mt-1'>Opening hour</h1>

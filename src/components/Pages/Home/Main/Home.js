@@ -5,7 +5,7 @@ import Chef from '../Chef';
 import FeatureDishes from '../FeatureDishes';
 import Gallery from '../Gallery';
 import Header from '../Header';
-import Menu from '../Menu/Menu';
+import Menu from '../Menu'
 import OpeningHour from '../OpeningHour';
 import OurStory from '../OurStory';
 import Services from '../Services';

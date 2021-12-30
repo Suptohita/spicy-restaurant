@@ -26,9 +26,9 @@ const Chef = () => {
                         <h1 className='md:font-bold font-semibold md:text-lg mt-5'>{chef.name}</h1>
                         <h1 className='md:font-medium text-gray-600'>{chef.Detail}</h1>
                         <div className='mt-4 cursor-pointer'>
-                            <i class="fab fa-facebook mx-2 hover:bg-white bg-yellow-500 rounded-full p-2"></i>
-                            <i class="fab fa-instagram-square mx-2 hover:bg-white bg-yellow-500 rounded-full p-2"></i>
-                            <i class="fab fa-twitter mx-2 hover:bg-white bg-yellow-500 rounded-full p-2"></i>
+                            <i className="fab md:text-base text-xs fa-facebook mx-2 hover:bg-white bg-yellow-500 rounded-full md:p-2 p-1"></i>
+                            <i className="fab md:text-base text-xs fa-instagram-square mx-2 hover:bg-white bg-yellow-500 rounded-full md:p-2 p-1"></i>
+                            <i className="fab md:text-base text-xs fa-twitter mx-2 hover:bg-white bg-yellow-500 rounded-full md:p-2 p-1"></i>
                         </div>
                     </div>)
                 }

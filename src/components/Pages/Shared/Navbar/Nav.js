@@ -1,9 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
 import logo from './image/logo.svg'
 import './Nav.css'
 
 
 const Nav = () => {
+
+    const { user, logOut } = useAuth()
+
+    console.log(user)
+
+
     return (
         <div>
             <div className='flex lg:mx-72 md:justify-between sm:justify-center m-5 items-center'>
@@ -28,36 +36,52 @@ const Nav = () => {
             </div>
 
             <div className='flex bg-gray-50 p-3 lg:mx-72 justify-center items-center'>
-                <h1 className='inline md:mx-5 mx-1 text-lg font-medium hover:text-yellow-500 cursor-pointer '>Home</h1>
+                <h1 className='inline md:mx-5 mx-1 text-lg font-medium hover:text-yellow-500 cursor-pointer '><Link to='/'>Home</Link></h1>
                 <h1 className='inline md:mx-5 mx-1 text-lg font-medium hover:text-yellow-500 cursor-pointer '>Menu</h1>
                 <h1 className='inline md:mx-5 mx-1 text-lg font-medium hover:text-yellow-500 cursor-pointer '>About</h1>
                 <h1 className='inline md:mx-5 mx-1 text-lg font-medium hover:text-yellow-500 cursor-pointer '>Contact</h1>
 
-                <h5 className='text-lg font-medium md:ml-32 lg:ml-72 border-l-2 border-gray-600'>
-                    <div className="dropdown inline-block ml-2 text-white text-sm bg-gray-700 hover:bg-yellow-500 mr-2 rounded-full border-t-8 pl-2 pt-1 pb-1">
-                        <i className="fas fa-user mr-2"></i>
-                        <ul className="dropdown-menu absolute hidden text text-gray-700 pt-4">
-                            <li className="">
-                                <h5 className="rounded-t border-black  bg-gray-200 hover:bg-yellow-300 py-2 px-4 block whitespace-no-wrap" href="a">Arvind Debnath</h5>
-                            </li>
+                <h5 className='text-lg font-medium md:ml-32 lg:ml-72 ml-3 border-l-2 border-gray-600'>
+                    {
+                        user.email ? <div className="dropdown inline-block ml-2 text-white text-sm mr-2">
+                            <img className='rounded-full -mb-2 md:ml-2 w-8' src={user.photoURL} alt="" />
 
-                            <li className="">
-                                <a className="bg-gray-200 hover:bg-yellow-300 py-2 px-4 block whitespace-no-wrap" href="a">My review</a>
-                            </li>
+                            <ul className="dropdown-menu absolute hidden text text-gray-700 pt-4">
+                                <div>
+                                    <li className="">
+                                        <h5 className="rounded-t border-black  bg-gray-200 hover:bg-yellow-300 py-2 px-4 block whitespace-no-wrap" href="a">{user.displayName}</h5>
+                                    </li>
+                                    <li className="">
+                                        <a className="bg-gray-200 hover:bg-yellow-300 py-2 px-4 block whitespace-no-wrap" href="a">My review</a>
+                                    </li>
+                                    <li className="">
+                                        <Link to='/login'>
+                                            <h5 className="rounded-b bg-gray-200 py-3 px-4 block whitespace-no-wrap" href="a"><span className='hover:bg-yellow-500 p-1 cursor-pointer rounded' onClick={logOut}>Log Out</span></h5>
+                                        </Link>
+                                    </li>
+                                </div>
+                            </ul>
+                        </div> :
+                            <div className="dropdown inline-block ml-2 text-white text-sm bg-gray-700 hover:bg-yellow-500 mr-2 rounded-full border-t-8 pl-2 pt-1 pb-1">
+                                <i className="fas fa-user mr-2"></i>
 
-                            <li className="">
-                                <h5 className="rounded-b bg-gray-200 py-3 px-4 block whitespace-no-wrap" href="a"><span className='hover:bg-yellow-500 p-1 cursor-pointer rounded'>Login</span></h5>
-                            </li>
-                        </ul>
-                    </div>
+                                <ul className="dropdown-menu absolute hidden text text-gray-700 pt-4">
+                                    <div>
+                                        <li className="">
+                                            <Link to='/login'>
+                                                <h5 className="rounded-b bg-gray-200 py-3 px-4 block whitespace-no-wrap" href="a"><span className='hover:text-yellow-500 p-1 cursor-pointer rounded'>Log In</span></h5>
+                                            </Link>
+                                        </li>
+                                    </div>
+                                </ul>
+                            </div>
+                    }
 
                     <div className='inline cursor-pointer'>
                         <i className="fas pl-1 fa-clipboard-list text-2xl hover:text-yellow-500 text-red-400 mr-2 ml-2 border-l-2 border-gray-600"></i>
                         <span className='hidden md:inline text-gray-600 hover:text-yellow-500 font-medium text-base'>bookings</span>
                     </div>
                 </h5>
-
-
             </div>
         </div>
     );

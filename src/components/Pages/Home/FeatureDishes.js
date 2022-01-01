@@ -8,9 +8,9 @@ const FeatureDishes = () => {
     useEffect(() => {
         fetch('http://localhost:8000/feature-dish')
             .then(res => res.json())
-            .then(data => setDishes(data.slice(0,6)))
+            .then(data => setDishes(data.slice(0, 6)))
     }, [])
-    
+
 
     return (
         <div className='my-20'>
@@ -20,7 +20,7 @@ const FeatureDishes = () => {
             </div>
             <div className='flex items-center text-center lg:mx-72 md:mx-10 mx-2 overflow-y-hidden scroll-bar'>
                 {
-                    dishes.map(dish => <div key={dish._id} style={{height:'450px', minWidth:'310px'}} className='bg-gray-50 m-3 outline-none hover:border-yellow-500 border-transparent border-4 cursor-pointer'>
+                    dishes.map(dish => <div key={dish._id} style={{ height: '450px', minWidth: '310px' }} className='bg-gray-50 m-3 outline-none hover:border-yellow-500 border-transparent border-4 cursor-pointer'>
                         <img className='w-36 h-36 ml-20 mb-10 mt-10 rounded-full' src={dish.img} alt="" />
                         <h1 className='font-bold text-xl hover:text-yellow-500 mb-4'>{dish.name}</h1>
                         <p className='text-lg font-medium text-gray-600 mb-3'>{dish.description}</p>

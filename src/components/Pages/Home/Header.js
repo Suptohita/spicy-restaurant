@@ -2,6 +2,8 @@ import React from 'react';
 import dish from './Images/dish.png'
 
 const Header = () => {
+
+
     return (
         <div className='flex lg:flex-row flex-col-reverse justify-center lg:text-left text-center items-center md:mt-28 md:mb-20 mt-12 mb-20'>
             <div>
@@ -16,7 +18,7 @@ const Header = () => {
 
                 <div className="mt-8">
                     <button className='bg-yellow-500 p-2 px-7 mr-3 text-white font-bold hover:bg-yellow-600'>Book a table</button>
-                    <button className='border border-yellow-500 p-1.5 px-7 font-bold hover:bg-yellow-500 hover:text-white'>Discover more</button>
+                    <button className='border border-yellow-500 p-1.5 px-7 font-bold hover:bg-yellow-500 hover:text-white' >Discover more</button>
                 </div>
             </div>
 

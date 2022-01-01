@@ -1,9 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
 import Footer from '../Shared/Footer/Footer';
 import Nav from '../Shared/Navbar/Nav';
 
 const Login = () => {
+
+    const {signInUsingGoogle} = useAuth()
+
+    const handleGoogleLogin = () => {
+        signInUsingGoogle()
+    }
+
     return (
         <div>
             <Nav></Nav>
@@ -33,7 +41,7 @@ const Login = () => {
                         <input type="submit" className='bg-yellow-500 p-2 md:px-16 px-8 text-white font-bold hover:bg-yellow-600 mr-3' value="Submit" />
 
                     </form>
-                    <button className='border border-yellow-500 p-1.5 md:px-7 px-5 font-bold hover:bg-yellow-500 hover:text-white md:ml-3'>Google Sign In</button>
+                    <button className='border border-yellow-500 p-1.5 md:px-7 px-5 font-bold hover:bg-yellow-500 hover:text-white md:ml-3' onClick={handleGoogleLogin} >Google Sign In</button>
 
                     <h6 className='mt-3 font-medium text-gray-700'>Not register yet? <Link to='/register' className='font-bold text-yellow-500 ml-2'>Create an account</Link></h6>
 

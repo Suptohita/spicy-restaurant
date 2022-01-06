@@ -55,9 +55,7 @@ const Nav = () => {
                                         <a className="bg-gray-200 hover:bg-yellow-300 py-2 px-4 block whitespace-no-wrap" href="a">My review</a>
                                     </li>
                                     <li className="">
-                                        <Link to='/login'>
                                             <h5 className="rounded-b bg-gray-200 py-3 px-4 block whitespace-no-wrap" href="a"><span className='hover:bg-yellow-500 p-1 cursor-pointer rounded' onClick={logOut}>Log Out</span></h5>
-                                        </Link>
                                     </li>
                                 </div>
                             </ul>

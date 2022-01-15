@@ -35,9 +35,9 @@ const Nav = () => {
 
             <div className='flex bg-gray-50 p-3 lg:mx-72 justify-center items-center'>
                 <h1 className='inline md:mx-5 mx-1 text-lg font-medium hover:text-yellow-500 cursor-pointer '><Link to='/'>Home</Link></h1>
-                <h1 className='inline md:mx-5 mx-1 text-lg font-medium hover:text-yellow-500 cursor-pointer '>Menu</h1>
-                <h1 className='inline md:mx-5 mx-1 text-lg font-medium hover:text-yellow-500 cursor-pointer '>About</h1>
-                <h1 className='inline md:mx-5 mx-1 text-lg font-medium hover:text-yellow-500 cursor-pointer '>Contact</h1>
+                <h1 className='inline md:mx-5 mx-1 text-lg font-medium hover:text-yellow-500 cursor-pointer '><Link to='/menu'>Menu</Link></h1>
+                <h1 className='inline md:mx-5 mx-1 text-lg font-medium hover:text-yellow-500 cursor-pointer '><Link to='/about'>About</Link></h1>
+                <h1 className='inline md:mx-5 mx-1 text-lg font-medium hover:text-yellow-500 cursor-pointer '><Link to='/contact'>Contact</Link></h1>
 
                 <h5 className='text-lg font-medium md:ml-32 lg:ml-72 ml-3 border-l-2 border-gray-600'>
                     {

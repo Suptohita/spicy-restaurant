@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import Footer from '../Shared/Footer/Footer';
@@ -6,10 +6,26 @@ import Nav from '../Shared/Navbar/Nav';
 
 const Login = () => {
 
-    const {signInUsingGoogle} = useAuth()
+    const {signInUsingGoogle, signIn} = useAuth()
+
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
 
     const handleGoogleLogin = () => {
         signInUsingGoogle()
+    }
+
+    const userEmail = (e) =>{
+        setEmail(e.target.value)
+    } 
+
+    const userPassword = (e) => {
+        setPassword(e.target.value)
+    }
+
+    const handleSignIn = (e) => {
+        e.preventDefault()
+        signIn(email, password)
     }
 
     return (
@@ -23,11 +39,11 @@ const Login = () => {
                     <form className='inline'>
                         <label htmlFor="email" className='font-semibold'>EMAIL ADRESS *</label>
                         <br />
-                        <input type="email" name="email" id="email" required placeholder='Email adress e.g jason@gmail.com' className='focus:outline-none focus:ring-2 focus:ring-yellow-500 p-3 md:w-96 w-72 border border-yellow-200 mt-2 mb-5' />
+                        <input onChange={userEmail} type="email" name="email" id="email" required placeholder='Email adress e.g jason@gmail.com' className='focus:outline-none focus:ring-2 focus:ring-yellow-500 p-3 md:w-96 w-72 border border-yellow-200 mt-2 mb-5' />
                         <br />
                         <label htmlFor="password" className='font-semibold'>PASSWORD *</label>
                         <br />
-                        <input type="password" name="password" id="password" required placeholder='Enter Your Password' className='focus:outline-none focus:ring-2 focus:ring-yellow-500 p-3 md:w-96 w-72 border border-yellow-200 mt-2 ' />
+                        <input onChange={userPassword} type="password" name="password" id="password" required placeholder='Enter Your Password' className='focus:outline-none focus:ring-2 focus:ring-yellow-500 p-3 md:w-96 w-72 border border-yellow-200 mt-2 ' />
                         <br />
 
                         <div className='mt-5'>
@@ -38,7 +54,7 @@ const Login = () => {
                         <br />
 
 
-                        <input type="submit" className='bg-yellow-500 p-2 md:px-16 px-8 text-white font-bold hover:bg-yellow-600 mr-3' value="Submit" />
+                        <input onClick={handleSignIn} type="submit" className='bg-yellow-500 p-2 md:px-16 px-8 text-white font-bold hover:bg-yellow-600 mr-3' value="Submit" />
 
                     </form>
                     <button className='border border-yellow-500 p-1.5 md:px-7 px-5 font-bold hover:bg-yellow-500 hover:text-white md:ml-3' onClick={handleGoogleLogin} >Google Sign In</button>

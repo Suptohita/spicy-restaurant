@@ -8,7 +8,7 @@ const Chef = () => {
     const [chef, setChef] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:8000/chef')
+        fetch('https://suptohita-spicy-restaurant.herokuapp.com/chef')
             .then(res => res.json())
             .then(data => setChef(data))
     })

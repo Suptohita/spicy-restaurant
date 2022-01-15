@@ -5,7 +5,7 @@ const Gallery = () => {
     const [foodImage, setFoodImage] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:8000/gallery')
+        fetch('https://suptohita-spicy-restaurant.herokuapp.com/gallery')
             .then(res => res.json())
             .then(data => setFoodImage(data.slice(0, 8)))
     }, [])

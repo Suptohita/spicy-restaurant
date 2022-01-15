@@ -6,7 +6,7 @@ const FeatureDishes = () => {
     const [dishes, setDishes] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:8000/feature-dish')
+        fetch('https://suptohita-spicy-restaurant.herokuapp.com/feature-dish')
             .then(res => res.json())
             .then(data => setDishes(data.slice(0, 6)))
     }, [])

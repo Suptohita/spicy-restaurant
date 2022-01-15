@@ -9,8 +9,6 @@ const Nav = () => {
 
     const { user, logOut } = useAuth()
 
-    console.log(user)
-
 
     return (
         <div>
@@ -44,8 +42,10 @@ const Nav = () => {
                 <h5 className='text-lg font-medium md:ml-32 lg:ml-72 ml-3 border-l-2 border-gray-600'>
                     {
                         user.email ? <div className="dropdown inline-block ml-2 text-white text-sm mr-2">
-                            <img className='rounded-full -mb-2 md:ml-2 w-8' src={user.photoURL} alt="" />
-
+                            {/* <img className='rounded-full -mb-2 md:ml-2 w-8' src={user.photoURL} alt="" /> */}
+                            {
+                                user.email && user.photoURL ? <img className='rounded-full -mb-2 md:ml-2 w-8' src={user.photoURL} alt="" />: <i className='fas fa-user text-white text-sm bg-yellow-500 mr-2 rounded-full border-t-8 px-2 py-1'></i>
+                            }
                             <ul className="dropdown-menu absolute hidden text text-gray-700 pt-4">
                                 <div>
                                     <li className="">

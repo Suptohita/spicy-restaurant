@@ -8,7 +8,7 @@ const Menu = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:8000/menu')
+        fetch('https://suptohita-spicy-restaurant.herokuapp.com/menu')
             .then(res => res.json())
             .then(data => setMenu(data.filter(item => item.category === category)))
     }, [category])

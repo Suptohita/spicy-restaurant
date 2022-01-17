@@ -19,16 +19,16 @@ const ExpandMenu = () => {
         <div id='hello'>
             <div className='bg-white'>
                 <Nav></Nav>
-                <div className='text-center lg:mx-72 md:mx-10 mx-2 md:mt-24 mt-12'>
+                <div className='text-center lg:mx-72 md:mx-10 mx-2 md:mt-24 mt-12 pb-10'>
                     <h6 className='text-lg text-yellow-500 font-bold'>THE MENU</h6>
                     <h2 className='text-5xl mb-4 mt-2 font-bold'>Our food menu</h2>
-                    <p className='text-center text-lg font-semibold text-gray-600'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem labore suscipit.</p>
-                    <button className='bg-yellow-500 p-1.5 px-8 mr-3 mt-5 text-white font-bold hover:bg-yellow-600'>Book a table</button>
+                    <p className='text-center md:px-20 lg:px-80 text-lg font-semibold text-gray-600'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, facilis numquam. Sequi, sed, aliquam veritatis est quidem rem soluta iusto beatae quo sit, eum aliquid?</p>
+                    <button className='bg-yellow-500 p-1.5 px-8 mr-3 mt-12 text-white font-bold hover:bg-yellow-600'>Book a table</button>
                 </div>
                 <hr className='lg:mx-72 md:mx-10 mx-5 my-7 border-8 border-gray-100 rounded-full' />
 
                 {/* signature dish  */}
-                <div className='pb-10 mx-52'>
+                <div className='pb-10 lg:mx-52'>
                     <h6 className='pt-10 text-center text-sm text-yellow-500 font-bold'>SIGNATURE DISHES</h6>
                     <h2 className='text-center font-bold text-3xl mt-2'>Our Signature Dishes</h2>
                     <div className='grid gap-6 lg:mx-96 md:mx-48 mt-12 mx-5 pb-40'>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Gallery.css'
 
 const Gallery = () => {
@@ -22,7 +23,7 @@ const Gallery = () => {
                     )
                 }
             </div>
-            <button className='bg-yellow-500 p-2 px-7 mr-3 mt-5 text-white font-bold hover:bg-yellow-600'>Discover More</button>
+            <button className='bg-yellow-500 p-2 px-7 mr-3 mt-5 text-white font-bold hover:bg-yellow-600'><Link to='/gallery'>Discover More</Link></button>
         </div>
     );
 };

@@ -14,7 +14,7 @@ const Footer = () => {
                 <h6 className='hover:text-yellow-500 font-bold mx-2 text-gray-500'>Contact</h6>
                 <h6 className='hover:text-yellow-500 font-bold mx-2 text-gray-500'>Typography</h6>
             </div>
-            <p className='font-semibold mt-4'>Copyright ©️ 2021 Spicy-Restaurant</p>
+            <p className='font-semibold mt-4'>Copyright ©️ 2022 Spicy-Restaurant</p>
         </div>
     );
 };

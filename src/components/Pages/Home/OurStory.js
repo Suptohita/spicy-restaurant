@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const OurStory = () => {
     return (
@@ -12,7 +13,7 @@ const OurStory = () => {
             Every day, more than 1 million guests visit our restaurants around the world.  And they do so because our restaurants are known for serving high-quality, great-tasting, and affordable food.The original Home of the Whopper, our commitment to premium ingredients, signature recipes, and family-friendly dining.
             </p>
 
-            <button className='bg-yellow-500 p-2 px-7 mr-3 mt-5 text-white font-bold hover:bg-yellow-600'>Discover More</button>
+            <button className='bg-yellow-500 p-2 px-7 mr-3 mt-5 text-white font-bold hover:bg-yellow-600'><Link to='/about'>Discover More</Link></button>
         </div>
     );
 };

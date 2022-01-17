@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import dish from './Images/dish.png'
 
 const Header = () => {
@@ -18,7 +19,7 @@ const Header = () => {
 
                 <div className="mt-8">
                     <button className='bg-yellow-500 p-2 px-7 mr-3 text-white font-bold hover:bg-yellow-600'>Book a table</button>
-                    <button className='border border-yellow-500 p-1.5 px-7 font-bold hover:bg-yellow-500 hover:text-white' >Discover more</button>
+                    <button className='border border-yellow-500 p-1.5 px-7 font-bold hover:bg-yellow-500 hover:text-white' ><Link to='/menu'>Discover more</Link></button>
                 </div>
             </div>
 

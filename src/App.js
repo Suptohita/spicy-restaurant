@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import AuthProvider from './components/Context/AuthProvider';
 import About from './components/Pages/About/About';
+import Contact from './components/Pages/Contact/Contact';
 import Home from './components/Pages/Home/Main/Home';
 import Login from './components/Pages/Login/Login';
 import ExpandMenu from './components/Pages/Menu/ExpandMenu'
@@ -20,6 +21,7 @@ function App() {
             <Route path='/register' element={<Register/>} />
             <Route path='/menu' element={<ExpandMenu/>} />
             <Route path='/about' element={<About/>} />
+            <Route path='/contact' element={<Contact/>} />
           </Routes>
         </Router>
       </AuthProvider>

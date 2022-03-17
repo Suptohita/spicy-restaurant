@@ -5,7 +5,7 @@ import Footer from '../Shared/Footer/Footer';
 import Nav from '../Shared/Navbar/Nav';
 
 const Register = () => {
-    const {register} = useAuth()
+    const { register, signInUsingGoogle } = useAuth()
 
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
@@ -16,8 +16,8 @@ const Register = () => {
     const [checkPassword, setCheckPassword] = useState(false)
 
 
-    const userName = (e)  => {
-        setName(e.target.value)       
+    const userName = (e) => {
+        setName(e.target.value)
     }
 
     const userEmail = (e) => {
@@ -39,15 +39,15 @@ const Register = () => {
     const confirmUserPassword = (e) => {
         setConfirmPassword(e.target.value)
     }
-    
-    useEffect(()=>{
-        if(password === confirmPassword){
+
+    useEffect(() => {
+        if (password === confirmPassword) {
             setCheckPassword(true)
         }
-        else{
+        else {
             setCheckPassword(false)
         }
-    },[password, confirmPassword])
+    }, [password, confirmPassword])
 
 
     const handleRegister = (e) => {
@@ -55,6 +55,9 @@ const Register = () => {
         register(email, confirmPassword, name, phoneNumber, address)
     }
 
+    const handleGoogleLogin = () => {
+        console.log('hello')
+    }
 
     return (
         <div>
@@ -101,11 +104,11 @@ const Register = () => {
                         {
                             checkPassword ? '' : <h6 className='text-center mt-3 font-medium text-red-600'>Password didn't match</h6>
                         }
-                        
+
                         <button onClick={handleRegister} disabled={!checkPassword} className='bg-yellow-500 p-2 mt-10 md:px-16 px-8 text-white font-bold hover:bg-yellow-600 mr-3'>Submit</button>
                     </form>
 
-                        <button className='border border-yellow-500 p-1.5 md:px-7 px-5 font-bold hover:bg-yellow-500 hover:text-white md:ml-3'>Google Sign In</button>
+                    <button className='border border-yellow-500 p-1.5 md:px-7 px-5 font-bold hover:bg-yellow-500 hover:text-white md:ml-3' onClick={(e)=>signInUsingGoogle()}>Google Sign In</button>
 
                     <h6 className='mt-3 font-medium text-gray-700'>Already registered? <Link to='/login' className='font-bold text-yellow-500 ml-2'>Please Login</Link></h6>
 

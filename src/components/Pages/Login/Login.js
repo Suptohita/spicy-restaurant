@@ -1,23 +1,24 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import Footer from '../Shared/Footer/Footer';
 import Nav from '../Shared/Navbar/Nav';
 
 const Login = () => {
 
-    const {signInUsingGoogle, signIn} = useAuth()
+    const { signInUsingGoogle, signIn } = useAuth()
+    const navigate = useNavigate()
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
     const handleGoogleLogin = () => {
-        signInUsingGoogle()
+        signInUsingGoogle(navigate)
     }
 
-    const userEmail = (e) =>{
+    const userEmail = (e) => {
         setEmail(e.target.value)
-    } 
+    }
 
     const userPassword = (e) => {
         setPassword(e.target.value)
@@ -25,7 +26,7 @@ const Login = () => {
 
     const handleSignIn = (e) => {
         e.preventDefault()
-        signIn(email, password)
+        signIn(email, password, navigate)
     }
 
     return (

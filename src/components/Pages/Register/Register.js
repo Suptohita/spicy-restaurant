@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import Footer from '../Shared/Footer/Footer';
 import Nav from '../Shared/Navbar/Nav';
+import { useNavigate } from 'react-router'
 
 const Register = () => {
     const { register, signInUsingGoogle } = useAuth()
@@ -14,6 +15,8 @@ const Register = () => {
     const [password, setPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('')
     const [checkPassword, setCheckPassword] = useState(false)
+
+    const navigate = useNavigate()
 
 
     const userName = (e) => {
@@ -52,7 +55,7 @@ const Register = () => {
 
     const handleRegister = (e) => {
         e.preventDefault()
-        register(email, confirmPassword, name, phoneNumber, address)
+        register(email, confirmPassword, name, phoneNumber, address, navigate)
 
         if (checkPassword && name && email && phoneNumber && address) {
             const data = { name, email, confirmPassword, phoneNumber, address }
@@ -114,7 +117,7 @@ const Register = () => {
                         }
 
                         {
-                            !checkPassword ? <button disabled={!checkPassword} className='bg-yellow-200 p-2 mt-10 md:px-16 px-8 text-white font-bold mr-3 cursor-not-allowed'>Submit</button>
+                            !password || !checkPassword ? <button disabled={!checkPassword} className='bg-yellow-200 p-2 mt-10 md:px-16 px-8 text-white font-bold mr-3 cursor-not-allowed'>Submit</button>
                                 :
                                 <button onClick={handleRegister} disabled={!checkPassword} className='bg-yellow-500 p-2 mt-10 md:px-16 px-8 text-white font-bold hover:bg-yellow-600 mr-3'>Submit</button>
                         }
